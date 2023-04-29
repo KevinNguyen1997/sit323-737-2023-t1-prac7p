@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+  labels:
+    run: mypod
+spec:
+  containers:
+  - image: kevinnguyen751997/dockerapp:latest
+    name: dockerapp
+    imagePullPolicy: Never
+    ports:
+    - containerPort: 8080
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
